@@ -1,18 +1,39 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <div>
+      <button @click="signOut">Logout</button>
+
+      {{ user }}
+    </div>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
+import { useStore } from 'vuex'
+import { computed } from 'vue'
 
 export default {
   name: 'Home',
-  components: {
-    HelloWorld
+
+  setup () {
+    const store = useStore()
+    // const { replace } = useRouter()
+
+    const user = computed(() => store.getters['auth/user'])
+
+    function signOut () {
+      return store.dispatch('auth/logout', async function (commit) {
+        location.href = '/logout'
+        // commit('removeUser')
+      })
+    }
+
+    return {
+      user,
+      signOut
+    }
   }
 }
 </script>

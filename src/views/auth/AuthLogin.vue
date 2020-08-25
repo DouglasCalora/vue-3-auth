@@ -29,9 +29,7 @@ export default {
       try {
         await store.dispatch('auth/login', fields)
         replace({ name: 'Home' })
-      } catch {
-        console.log('Deu erro')
-      }
+      } catch {}
     }
 
     return {

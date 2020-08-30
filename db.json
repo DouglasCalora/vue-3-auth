@@ -1,0 +1,25 @@
+{
+  "post": [
+    {
+      "id": 1,
+      "title": "Titulo do post",
+      "category": "tec",
+      "shotDescription": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    },
+    {
+      "id": 2,
+      "title": "Titulo do post",
+      "category": "nature",
+      "shotDescription": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    },
+    {
+      "id": 3,
+      "title": "Titulo do post",
+      "category": "sports",
+      "shotDescription": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+      "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.  It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."
+    }
+  ]
+}

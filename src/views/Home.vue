@@ -1,10 +1,10 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+    <img alt="Vue logo" src="../assets/logo.png" />
     <div>
       <button @click="signOut">Logout</button>
-
       {{ user }}
+      {{ list }}
     </div>
   </div>
 </template>
@@ -19,9 +19,19 @@ export default {
 
   setup () {
     const store = useStore()
+    console.log('setup -> store', store)
     // const { replace } = useRouter()
 
     const user = computed(() => store.getters['auth/user'])
+    const list = computed(() => store.getters['post/list'])
+
+    store.dispatch('post/fetchList', {
+      url: '/user/watchlist',
+      errorPath: 'response.data.error',
+      listPath: 'data.data'
+    })
+
+    console.log(list)
 
     function signOut () {
       return store.dispatch('auth/logout', async function (commit) {
@@ -31,6 +41,7 @@ export default {
     }
 
     return {
+      list,
       user,
       signOut
     }

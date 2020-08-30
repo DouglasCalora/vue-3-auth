@@ -22,6 +22,16 @@ const routes = [
     component: () => import('../views/WatchList')
   },
   {
+    path: '/post',
+    name: 'PostList',
+    component: () => import('../views/post/PostList')
+  },
+  {
+    path: '/post/:id',
+    name: 'PostShow',
+    component: () => import('../views/post/PostShow')
+  },
+  {
     path: '/login',
     name: 'Login',
     component: () => import('../views/auth/AuthLogin.vue')

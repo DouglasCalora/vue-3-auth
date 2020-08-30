@@ -1,7 +1,8 @@
 import axios from 'axios'
 
 export default function () {
-  axios.defaults.baseURL = 'http://localhost:5000/'
+  const test = true
+  axios.defaults.baseURL = test ? 'http://localhost:3000/' : 'http://localhost:5000/'
 
   axios.defaults.validateStatus = status => {
     if (status === 401) {
